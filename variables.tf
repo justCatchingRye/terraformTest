@@ -26,16 +26,16 @@ variable "vmname" {
   type = "string"
 }
 variable "numcpus" {
-  type = "number"
+  type = "string"
 }
 variable "timeout" {
-  type = "number"
+  type = "string"
 }
 variable "disk_label" {
   type = "string"
 }
 variable "size" {
-  type = "number"
+  type = "string"
 }
 variable "iso" {
   type = "string"
