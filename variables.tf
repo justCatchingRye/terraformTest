@@ -1,42 +1,42 @@
 variable "username" {
-  type = string
+  type = "string"
 }
 variable "password" {
-  type = string
+  type = "string"
 }
 variable "vcenter" {
-  type = string
+  type = "string"
 }
 variable "datacenter" {
-  type = string
+  type = "string"
 }
 variable "datastore" {
-  type = string
+  type = "string"
 }
 variable "iso_datastore" {
-  type = string
+  type = "string"
 }
 variable "pool" {
-  type = string
+  type = "string"
 }
 variable "network" {
-  type = string
+  type = "string"
 }
 variable "vmname" {
-  type = string
+  type = "string"
 }
 variable "numcpus" {
-  type = number
+  type = "number"
 }
 variable "timeout" {
-  type = number
+  type = "number"
 }
 variable "disk_label" {
-  type = string
+  type = "string"
 }
 variable "size" {
-  type = number
+  type = "number"
 }
 variable "iso" {
-  type = string
+  type = "string"
 }
