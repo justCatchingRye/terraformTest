@@ -1,5 +1,5 @@
 provider "vsphere" {
-  user           = "administrator@sso.domain"
+  user           = "administrator@vsphere.local"
   password       = "100%foVGA"
   vsphere_server = "192.168.1.234"
 
