@@ -1,33 +1,33 @@
 provider "vsphere" {
   user           = "${var.username}"
-  password       = "${var.password}"
-  vsphere_server = "${var.vcenter}"
+  password       = "100%foVGA"
+  vsphere_server = "192.168.1.219"
 
   # If you have a self-signed cert
   allow_unverified_ssl = true
 }
 
 data "vsphere_datacenter" "dc" {
-  name = "${var.datacenter}"
+  name = "MJ-Datacenter"
 }
 
 data "vsphere_datastore" "datastore" {
-  name          = "${var.datastore}"
+  name          = "datastore1"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
 
 data "vsphere_datastore" "iso_datastore" {
-  name          = "${var.iso_datastore}"
+  name          = "datastore1"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
 
 data "vsphere_resource_pool" "pool" {
-  name          = "${var.pool}"
+  name          = "MJ-Resource-Pool"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
 
 data "vsphere_network" "network" {
-  name          = "${var.network}"
+  name          = "VM Network"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
 
@@ -41,7 +41,7 @@ resource "vsphere_virtual_machine" "vm" {
   guest_id = "other3xLinux64Guest"
 
   wait_for_guest_net_timeout = "0"
-  
+
   network_interface {
     network_id = "${data.vsphere_network.network.id}"
   }
