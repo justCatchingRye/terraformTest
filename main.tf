@@ -1,7 +1,7 @@
 provider "vsphere" {
   user           = "${var.username}"
   password       = "100%foVGA"
-  vsphere_server = "192.168.1.219"
+  vsphere_server = "192.168.1.234"
 
   # If you have a self-signed cert
   allow_unverified_ssl = true
