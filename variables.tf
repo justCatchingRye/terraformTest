@@ -1,3 +1,3 @@
-variable "username" {
+variable "vmname" {
   type = "string"
 }
