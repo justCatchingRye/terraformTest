@@ -1,5 +1,5 @@
 provider "vsphere" {
-  user           = "${var.username}"
+  user           = "administrator@vsphere.local"
   password       = "100%foVGA"
   vsphere_server = "192.168.1.234"
 
@@ -32,7 +32,7 @@ data "vsphere_network" "network" {
 }
 
 resource "vsphere_virtual_machine" "vm" {
-  name             = "terraform-test"
+  name             = "${var.vmname}"
   resource_pool_id = "${data.vsphere_resource_pool.pool.id}"
   datastore_id     = "${data.vsphere_datastore.datastore.id}"
 
